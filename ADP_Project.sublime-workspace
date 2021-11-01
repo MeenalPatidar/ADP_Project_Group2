@@ -1,0 +1,411 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Sc",
+				"screenDim"
+			],
+			[
+				"screen",
+				"screenDim"
+			],
+			[
+				"scr",
+				"screenDim"
+			],
+			[
+				"poly",
+				"poly_inp"
+			],
+			[
+				"__",
+				"__delitem__"
+			],
+			[
+				"class",
+				"class_labels"
+			],
+			[
+				"Iri",
+				"Iris-virginica"
+			],
+			[
+				"data",
+				"dataClass1"
+			],
+			[
+				"dat",
+				"dataClass3"
+			],
+			[
+				"push",
+				"push_front"
+			],
+			[
+				"pop",
+				"pop_front"
+			],
+			[
+				"to",
+				"to_numpy"
+			],
+			[
+				"df_tr",
+				"df_train1"
+			],
+			[
+				"df_",
+				"df_train0"
+			],
+			[
+				"df",
+				"df_train1"
+			],
+			[
+				"tes",
+				"test_cov1"
+			],
+			[
+				"tte",
+				"test_cov0"
+			],
+			[
+				"tr",
+				"train_cov1"
+			],
+			[
+				"tra",
+				"train_cov0"
+			],
+			[
+				"df_train_cla",
+				"df_train_class1"
+			],
+			[
+				"df_train_c",
+				"df_train_class0"
+			],
+			[
+				"df_rain",
+				"df_train_class0"
+			],
+			[
+				"df_train_",
+				"df_train_class0"
+			],
+			[
+				"Steel",
+				"SteelPlateFaults-test"
+			],
+			[
+				"St",
+				"SteelPlateFaults-train"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 4754,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"revert",
+					null,
+					"AwAAAAAAAAAAAAAAAAAAAAAAAACSEgAAY29uc3QgZXhwcmVzcyA9IHJlcXVpcmUoImV4cHJlc3MiKTsKY29uc3QgbW9uZ29vc2UgPSByZXF1aXJlKCJtb25nb29zZSIpOwpjb25zdCBjb29raWVQYXJzZXIgPSByZXF1aXJlKCJjb29raWUtcGFyc2VyIik7Cgpjb25zdCBhcHAgPSBleHByZXNzKCk7CmFwcC51c2UoZXhwcmVzcy51cmxlbmNvZGVkKHsgZXh0ZW5kZWQ6IHRydWUgfSkpOwphcHAudXNlKGV4cHJlc3Muc3RhdGljKF9fZGlybmFtZSArICIvcHVibGljIikpOwphcHAudXNlKGNvb2tpZVBhcnNlcigpKTsKYXBwLnNldCgidmlldyBlbmdpbmUiLCAiZWpzIik7Cgpjb25zdCBvcHRpb25zRm9yTW9uZ29vc2UgPSB7CiAgICB1c2VOZXdVcmxQYXJzZXI6IHRydWUsCiAgICB1c2VVbmlmaWVkVG9wb2xvZ3k6IHRydWUKfTsKY29uc3QgdXJsID0gIm1vbmdvZGI6Ly9sb2NhbGhvc3Q6MjcwMTcvQURQX1Byb2plY3QiOwptb25nb29zZS5jb25uZWN0KHVybCwgb3B0aW9uc0Zvck1vbmdvb3NlKTsKCmNvbnN0IGl0ZW1TY2hlbWEgPSBuZXcgbW9uZ29vc2UuU2NoZW1hKHsKICAgIHRleHQ6IFN0cmluZwp9KTsKY29uc3QgSXRlbSA9IG5ldyBtb25nb29zZS5tb2RlbCgiaXRlbSIsIGl0ZW1TY2hlbWEpOwoKY29uc3QgdXNlclNjaGVtYSA9IG5ldyBtb25nb29zZS5TY2hlbWEoewogICAgdXNlcm5hbWU6IHsKICAgICAgICB0eXBlOiBTdHJpbmcsCiAgICAgICAgcmVxdWlyZWQ6IHRydWUKICAgIH0sCiAgICBwYXNzd29yZDogewogICAgICAgIHR5cGU6IFN0cmluZywKICAgICAgICByZXF1aXJlZDogdHJ1ZQogICAgfSwKICAgIGl0ZW1MaXN0OiBbaXRlbVNjaGVtYV0KfSk7CmNvbnN0IFVzZXIgPSBuZXcgbW9uZ29vc2UubW9kZWwoInVzZXIiLCB1c2VyU2NoZW1hKQoKY29uc3QgbmV3VXNlckl0ZW1zID0gWwogICAgSXRlbSh7IHRleHQ6ICJIZWxsbyB1c2VyLCB3ZSBhcmUgaGFwcHkgdG8gc2VlIHlvdSB1c2UgdGhpcyBhcHAiIH0pLAogICAgSXRlbSh7IHRleHQ6ICJDbGljayBvbiB0aGUgdGV4dCBib3ggYmVsb3csIGFkZCB3aGF0IHlvdSB3YW50IHRvIGFkZCBhbmQgY2xpY2sgb24gdGhlICsgYnV0dG9uIHRvIGFkZCBuZXcgaXRlbXMiIH0pLAogICAgSXRlbSh7IHRleHQ6ICJDbGljayBvbiB0aGUgY2hlY2tib3ggb24gdGhlIGxlZnQgb2YgYW55IGV4aXN0aW5nIGl0ZW0gdG8gZGVsZXRlIGl0IiB9KQpdOwoKYXBwLmdldCgiLyIsIGZ1bmN0aW9uIChyZXEsIHJlcykgewogICAgdmFyIHVzZXJOYW1lID0gcmVxLmNvb2tpZXMudXNlcm5hbWU7CiAgICBpZiAodXNlck5hbWUpIHsKICAgICAgICBVc2VyLmZpbmRPbmUoeyB1c2VybmFtZTogdXNlck5hbWUgfSwgZnVuY3Rpb24gKGVyciwgdXNlcikgewogICAgICAgICAgICBpZiAoIWVycikgewogICAgICAgICAgICAgICAgaWYgKHVzZXIpIHsKICAgICAgICAgICAgICAgICAgICByZXMucmVuZGVyKCJob21lIiwgewogICAgICAgICAgICAgICAgICAgICAgICB1c2VyOiB1c2VyLnVzZXJuYW1lLAogICAgICAgICAgICAgICAgICAgICAgICBsaXN0OiB1c2VyLml0ZW1MaXN0LAogICAgICAgICAgICAgICAgICAgICAgICB1c2VySUQ6IHVzZXIuX2lkCiAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIHJlcy5yZWRpcmVjdCgiL2xvZ2luIik7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICByZXMuc2VuZChlcnIpOwogICAgICAgICAgICB9CiAgICAgICAgfSk7CiAgICB9IGVsc2UgewogICAgICAgIHJlcy5yZWRpcmVjdCgiL2xvZ2luIik7CiAgICB9Cn0pOwoKYXBwLmdldCgiL2xvZ2luIiwgZnVuY3Rpb24gKHJlcSwgcmVzKSB7CiAgICB2YXIgYmFkX2F1dGggPSByZXEucXVlcnkubXNnID8gdHJ1ZSA6IGZhbHNlOwogICAgaWYgKGJhZF9hdXRoKSB7CiAgICAgICAgcmVzLnJlbmRlcigibG9naW4iLCB7CiAgICAgICAgICAgIGVycm9yOiAiSW52YWxpZCBVc2VybmFtZSBvciBQYXNzd29yZCIKICAgICAgICB9KTsKICAgIH0gZWxzZSB7CiAgICAgICAgcmVzLnJlbmRlcigibG9naW4iLCB7CiAgICAgICAgICAgIGVycm9yOiAiIgogICAgICAgIH0pOwogICAgfQp9KTsKCmFwcC5wb3N0KCIvbG9naW4iLCBmdW5jdGlvbiAocmVxLCByZXMpIHsKICAgIGNvbnN0IG5ld1VzZXIgPSB7CiAgICAgICAgdXNlcm5hbWU6IHJlcS5ib2R5Lm5hbWUsCiAgICAgICAgcGFzc3dvcmQ6IHJlcS5ib2R5LnBhc3N3b3JkLAogICAgfTsKICAgIFVzZXIuZmluZE9uZSh7IHVzZXJuYW1lOiBuZXdVc2VyLnVzZXJuYW1lIH0sIGZ1bmN0aW9uIChlcnIsIHVzZXIpIHsKICAgICAgICBpZiAoIWVycikgewogICAgICAgICAgICBpZiAodXNlcikgewogICAgICAgICAgICAgICAgaWYgKHVzZXIucGFzc3dvcmQgIT09IG5ld1VzZXIucGFzc3dvcmQpIHsKICAgICAgICAgICAgICAgICAgICByZXMucmVkaXJlY3QoIi9sb2dpbj9tc2c9ZmFpbCIpOwogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICByZXMuY29va2llKCJ1c2VybmFtZSIsIHVzZXIudXNlcm5hbWUpOwogICAgICAgICAgICAgICAgICAgIHJlcy5yZWRpcmVjdCgiLyIpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgcmVzLnJlZGlyZWN0KCIvbG9naW4/bXNnPWZhaWwiKTsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHJlcy5yZWRpcmVjdCgiL2xvZ2luP21zZz1mYWlsIik7CiAgICAgICAgfQogICAgfSk7Cn0pOwoKYXBwLmdldCgiL3JlZ2lzdGVyIiwgZnVuY3Rpb24gKHJlcSwgcmVzKSB7CiAgICB2YXIgYmFkX2F1dGggPSByZXEucXVlcnkubXNnID8gdHJ1ZSA6IGZhbHNlOwogICAgaWYgKGJhZF9hdXRoKSB7CiAgICAgICAgcmVzLnJlbmRlcigicmVnaXN0ZXIiLCB7CiAgICAgICAgICAgIGVycm9yOiAiVXNlcm5hbWUgYWxyZWFkeSBleGlzdHMsIHBsZWFzZSBjaG9vc2Ugc29tZSBvdGhlciB1c2VybmFtZSIKICAgICAgICB9KTsKICAgIH0KICAgIHJlcy5yZW5kZXIoInJlZ2lzdGVyIiwgewogICAgICAgIGVycm9yOiAiIgogICAgfSk7Cn0pOwoKYXBwLnBvc3QoIi9yZWdpc3RlciIsIGZ1bmN0aW9uIChyZXEsIHJlcykgewogICAgY29uc3QgbmV3VXNlciA9IG5ldyBVc2VyKHsKICAgICAgICB1c2VybmFtZTogcmVxLmJvZHkubmFtZSwKICAgICAgICBwYXNzd29yZDogcmVxLmJvZHkucGFzc3dvcmQsCiAgICAgICAgaXRlbUxpc3Q6IG5ld1VzZXJJdGVtcwogICAgfSk7CiAgICBVc2VyLmZpbmRPbmUoeyB1c2VybmFtZTogbmV3VXNlci51c2VybmFtZSB9LCBmdW5jdGlvbiAoZXJyb3IsIHVzZXIpIHsKICAgICAgICBpZiAoIWVycm9yKSB7CiAgICAgICAgICAgIGlmICghdXNlcikgewogICAgICAgICAgICAgICAgVXNlci5pbnNlcnRNYW55KFtuZXdVc2VyXSwgZnVuY3Rpb24gKGVyciwgZG9jcykgewogICAgICAgICAgICAgICAgICAgIGlmICghZXJyKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGRvY3MpOwogICAgICAgICAgICAgICAgICAgICAgICByZXMuY29va2llKCJ1c2VybmFtZSIsIG5ld1VzZXIudXNlcm5hbWUpOwogICAgICAgICAgICAgICAgICAgICAgICByZXMucmVkaXJlY3QoIi8iKTsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICByZXMucmVkaXJlY3QoIi9yZWdpc3Rlcj9tc2c9ZmFpbCIpOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgcmVzLnJlZGlyZWN0KCIvcmVnaXN0ZXI/bXNnPWZhaWwiKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0pOwp9KTsKCmFwcC5wb3N0KCIvYWRkIiwgZnVuY3Rpb24gKHJlcSwgcmVzKSB7CiAgICBjb25zdCB1c2VyTmFtZSA9IHJlcS5ib2R5LnVzZXI7CiAgICBjb25zdCBuZXdJdGVtID0gSXRlbSh7IHRleHQ6IHJlcS5ib2R5Lml0ZW0gfSk7CiAgICBVc2VyLmZpbmRPbmUoeyB1c2VybmFtZTogdXNlck5hbWUgfSwgZnVuY3Rpb24gKGVyciwgdXNlcikgewogICAgICAgIGlmICghZXJyKSB7CiAgICAgICAgICAgIGlmICh1c2VyKSB7CiAgICAgICAgICAgICAgICB1c2VyLml0ZW1MaXN0LnB1c2gobmV3SXRlbSk7CiAgICAgICAgICAgICAgICB1c2VyLnNhdmUoKTsKICAgICAgICAgICAgICAgIHJlcy5yZWRpcmVjdCgiLyIpOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgcmVzLnJlZGlyZWN0KCIvbG9naW4iKTsKICAgICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHJlcy5zZW5kKCJlcnJvciIpOwogICAgICAgIH0KICAgIH0pOwp9KTsKCmFwcC5wb3N0KCIvZGVsZXRlIiwgZnVuY3Rpb24gKHJlcSwgcmVzKSB7CiAgICBjb25zdCB1c2VySWQgPSByZXEuYm9keS51c2VySWQ7CiAgICBjb25zdCBlbGVtSWQgPSByZXEuYm9keS5lbGVtSUQ7CiAgICBVc2VyLmZpbmRCeUlkQW5kVXBkYXRlKHVzZXJJZCwgeyAkcHVsbDogeyBpdGVtTGlzdDogeyBfaWQ6IGVsZW1JZCB9IH0gfSwgZnVuY3Rpb24gKGVyciwgcmVzdWx0KSB7CiAgICAgICAgaWYgKGVycikgewogICAgICAgICAgICBjb25zb2xlLmxvZyhlcnIpOwogICAgICAgIH0KICAgICAgICByZXMucmVkaXJlY3QoIi8iKTsKICAgIH0pOwp9KTsKCmFwcC5saXN0ZW4oMzAwMCwgZnVuY3Rpb24gKCkgewogICAgY29uc29sZS5sb2coIlNlcnZlciBzdGFydGVkIGF0IHBvcnQgMzAwMCIpOwp9KTsAAAAAAAAAAJISAAAAAAAAAAAAAAAAAAAAAAAAkhIAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADqAgAAAAAAAOoCAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/cpp_adv.sublime-build",
+					""
+				],
+				[
+					"Packages/User/cpp_adv.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/cpp_adv.sublime-build",
+					"Build and Run"
+				]
+			],
+			[
+				"Packages/User/cpp_adv.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/mnt/DATA/git/ADP_Project"
+	],
+	"file_history":
+	[
+		"/mnt/DATA/git/ADP_Project/.gitignore",
+		"/home/ritam/catkin_ws/src/strawberry_stacker/task_1/scripts/aruco_detection.py",
+		"/home/ritam/catkin_ws/src/strawberry_stacker/task_1/scripts/aruco_library.py",
+		"/home/ritam/Desktop/Strawberry_Stacker/video_capture.py",
+		"/home/ritam/Desktop/Tenet.txt",
+		"/home/ritam/Desktop/Somnath/index.html",
+		"/home/ritam/Desktop/L4Q1.py",
+		"/mnt/DATA/Python_Work/DS3_Assignments/b20127_Assignment4/cov1",
+		"/mnt/DATA/Python_Work/DS3_Assignments/b20127_Assignment4/Q1.py",
+		"/mnt/DATA/Python_Work/DS3_Assignments/b20127_Assignment4/Q2.py",
+		"/mnt/DATA/Python_Work/DS3_Assignments/b20127_Assignment4/Q3.py",
+		"/home/ritam/Desktop/iris.names",
+		"/home/ritam/Desktop/iris.data",
+		"/home/ritam/.config/geany/geany.conf",
+		"/mnt/DATA/Python_Work/DS3_Assignments/b20127_Assignment4/program.cpp",
+		"/mnt/DATA/git/vision_arcadia_dl-raspberry/final-gesture-recognition_optimized.py",
+		"/home/ritam/.config/sublime-text/Packages/User/cpp.sublime-snippet",
+		"/home/ritam/.config/sublime-text/Packages/User/gcd.sublime-snippet",
+		"/mnt/DATA/git/vision_arcadia_dl-raspberry/.gitignore",
+		"/home/ritam/.config/sublime-text/Packages/User/cpp_adv.sublime-build",
+		"/mnt/DATA/git/vision_arcadia_dl-raspberry/final-gesture-recognition.py",
+		"/mnt/DATA/C_C++_Work/Competitive_Programming/Contests/EduRound114/final.py",
+		"/mnt/DATA/C_C++_Work/Competitive_Programming/Contests/EduRound114/b.cpp",
+		"/mnt/DATA/C_C++_Work/Competitive_Programming/Contests/EduRound114/b",
+		"/mnt/DATA/C_C++_Work/Competitive_Programming/Contests/EduRound114/b.cpp:tests",
+		"/home/ritam/Desktop/new_folder/program.cpp"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 370.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 289.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "ADP_Project.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 296.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
