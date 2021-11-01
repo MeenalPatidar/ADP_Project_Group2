@@ -121,7 +121,6 @@ app.post("/register", function (req, res) {
             if (!user) {
                 User.insertMany([newUser], function (err, docs) {
                     if (!err) {
-                        console.log(docs);
                         res.cookie("username", newUser.username);
                         res.redirect("/");
                     } else {
@@ -164,6 +163,6 @@ app.post("/delete", function (req, res) {
     });
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server started at port 3000");
 });

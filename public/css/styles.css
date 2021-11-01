@@ -1,3 +1,34 @@
-body {
-    background-color: white;
+h1 {
+    text-align: center;
+}
+
+.container-fluid {
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.btn {
+    min-width: 10%;
+}
+
+.list-element {
+    font-size: 1.5rem;
+}
+
+#password {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1320px) {
+    .container-fluid {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-fluid {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
 }

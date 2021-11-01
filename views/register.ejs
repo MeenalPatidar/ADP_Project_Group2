@@ -1,12 +1,25 @@
-<%- include ("header/header") -%>
+<%- include ("partials/header") -%>
 
-<form action="/register" method="post">
-    <input type="text" name="name" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <button type="submit">Register</button>
-</form>
-<p>
-    <%= error %>
-</p>
+<div class="container-fluid">
+    <form action="/register" method="POST">
+        <label for="username" class="form-label">
+            Username
+        </label>
+        <input id="username" type="text" name="name" class="form-control">
+        <label for="password" class="form-label">
+            Password
+        </label>
+        <input id="password" type="password" name="password" class="form-control">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <p>
+        <%= error %>
+    </p>
+    <form action="/login">
+        <label for="login-button">
+            Please <button id="login-button" type="submit" class="btn btn-primary">Login</button> if you are an existing user
+        </label>
+    </form>
+</div>
 
-<%- include ("header/footer") -%>
+<%- include ("partials/footer") -%>
