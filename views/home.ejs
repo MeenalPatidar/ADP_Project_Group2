@@ -1,26 +1,26 @@
 <%- include ("partials/header") -%>
 
-<div class="container-fluid">
-    <h1>
-        <%= user %>'s Todolist
-    </h1>
-    <% list.forEach(function(element) { %>
-        <form action="/delete" method="POST" class="list-element">
-            <input type="checkbox" value="<%= element.id %>" onchange="this.form.submit()" id="<%= element.id %>">
-            <input type="hidden" value="<%= element.id %>" name="elemID">
-            <input type="hidden" value="<%= userID %>" name="userId">
-            <label for="<%= element.id %>">
-                <%= element.text %>
-            </label>
+    <div class="container-fluid">
+        <h1>
+            <%= user %>'s Todolist
+        </h1>
+        <% list.forEach(function(element) { %>
+            <form action="/delete" method="POST" class="list-element">
+                <input type="checkbox" value="<%= element.id %>" onchange="this.form.submit()" id="<%= element.id %>">
+                <input type="hidden" value="<%= element.id %>" name="elemID">
+                <input type="hidden" value="<%= userID %>" name="userId">
+                <label for="<%= element.id %>">
+                    <%= element.text %>
+                </label>
+            </form>
+        <% }); %>
+        <form action="/add" method="POST">
+            <div class="input-group">
+                <input type="text" name="item" class="form-control">
+                <input type="hidden" name="user" value="<%= user %>">
+                <button type="submit" class="btn btn-primary">+</button>
+            </div>
         </form>
-    <% }); %>
-    <form action="/add" method="POST">
-        <div class="input-group">
-            <input type="text" name="item" class="form-control">
-            <input type="hidden" name="user" value="<%= user %>">
-            <button type="submit" class="btn btn-primary">+</button>    
-        </div>
-    </form>
-</div>
+    </div>
 
-<%- include ("partials/footer") -%>
+    <%- include ("partials/footer") -%>

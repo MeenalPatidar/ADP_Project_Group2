@@ -166,8 +166,8 @@ app.post("/delete", function (req, res) {
 app.post("/check", function (req, res) {
     const userName = req.body.user;
     User.findOne({ username: userName }, function (err, user) {
-        if(!err) {
-            if(user) {
+        if (!err) {
+            if (user) {
                 res.send(true);
             } else {
                 res.send(false);

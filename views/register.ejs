@@ -1,27 +1,28 @@
 <%- include ("partials/header") -%>
 
-<div class="container-fluid">
-    <form action="/register" method="POST">
-        <label for="username" class="form-label">
-            Username
-        </label>
-        <input id="username" type="text" name="name" class="form-control">
-        <label for="password" class="form-label">
-            Password
-        </label>
-        <input id="password" type="password" name="password" class="form-control">
-        <button id="register" type="submit" class="btn btn-primary" disabled>Register</button>
-    </form>
-    <p>
-        <%= error %>
-    </p>
-    <form action="/login">
-        <label for="login-button">
-            Please <button id="login-button" type="submit" class="btn btn-primary">Login</button> if you are an existing user
-        </label>
-    </form>
-</div>
+    <div class="container-fluid">
+        <form action="/register" method="POST">
+            <label for="username" class="form-label">
+                Username
+            </label>
+            <input id="username" type="text" name="name" class="form-control">
+            <label for="password" class="form-label">
+                Password
+            </label>
+            <input id="password" type="password" name="password" class="form-control">
+            <button id="register" type="submit" class="btn btn-primary" disabled>Register</button>
+        </form>
+        <p>
+            <%= error %>
+        </p>
+        <form action="/login">
+            <label for="login-button">
+                Please <button id="login-button" type="submit" class="btn btn-primary">Login</button> if you are an
+                existing user
+            </label>
+        </form>
+    </div>
 
-<script src="js/register.js"></script>
+    <script src="js/register.js"></script>
 
-<%- include ("partials/footer") -%>
+    <%- include ("partials/footer") -%>
