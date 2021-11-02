@@ -163,6 +163,21 @@ app.post("/delete", function (req, res) {
     });
 });
 
+app.post("/check", function (req, res) {
+    const userName = req.body.user;
+    User.findOne({ username: userName }, function (err, user) {
+        if(!err) {
+            if(user) {
+                res.send(true);
+            } else {
+                res.send(false);
+            }
+        } else {
+            res.send(err);
+        }
+    });
+});
+
 app.listen(process.env.PORT || 3000, function () {
     console.log("Server started at port 3000");
 });
