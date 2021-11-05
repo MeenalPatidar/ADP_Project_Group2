@@ -12,9 +12,9 @@
             <input id="password" type="password" name="password" class="form-control">
             <button id="register" type="submit" class="btn btn-primary" disabled>Register</button>
         </form>
-        <p>
+        <div class="alert alert-danger" role="alert">
             <%= error %>
-        </p>
+        </div>
         <form action="/login">
             <label for="login-button">
                 Please <button id="login-button" type="submit" class="btn btn-primary">Login</button> if you are an
