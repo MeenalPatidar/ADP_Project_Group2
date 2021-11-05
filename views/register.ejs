@@ -6,10 +6,23 @@
                 Username
             </label>
             <input id="username" type="text" name="name" class="form-control">
-            <label for="password" class="form-label">
+            <label for="password" class="form-label validate" data-error="wrong" data-success="right">
                 Password
             </label>
-            <input id="password" type="password" name="password" class="form-control">
+            <input id="password" type="password" name="password" class="form-control validate">
+            <div class="col-md-5">
+
+                <div class="alert alert-warning password-alert" role="alert">
+                    Your password must contain the following:
+                    <ul>
+                        <li class="requirements leng"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> At least 8 characters.</li>
+                        <li class="requirements uppercase-letter"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> At least 1 uppercase letter.
+                        </li>
+                        <li class="requirements num"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> At least 1 number.</li>
+                        <li class="requirements special-char"><i class="fas fa-check green-text"></i><i class="fas fa-times red-text"></i> At least 1 special characters.</li>
+                    </ul>
+                </div>
+            </div>
             <button id="register" type="submit" class="btn btn-primary" disabled>Register</button>
         </form>
         <div class="alert alert-danger" role="alert">
