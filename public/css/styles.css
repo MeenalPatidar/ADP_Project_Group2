@@ -32,3 +32,20 @@ h1 {
         padding-left: 10%;
     }
 }
+
+.alert {
+    display: none;
+    width: 500px;
+}
+
+.requirements {
+    list-style-type: none;
+}
+
+.wrong .fa-check {
+    display: none;
+}
+
+.good .fa-times {
+    display: none;
+}
