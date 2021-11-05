@@ -13,9 +13,9 @@ $(function() {
     var $password = $(".form-control[type='password']");
     var $passwordAlert = $(".password-alert");
     var $requirements = $(".requirements");
-    var leng, bigLetter, num, specialChar;
+    var leng, upperCaseLetter, num, specialChar;
     var $leng = $(".leng");
-    var $bigLetter = $(".big-letter");
+    var $upperCaseLetter = $(".uppercase-letter");
     var $num = $(".num");
     var $specialChar = $(".special-char");
     var specialChars = "!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?`~";
@@ -37,8 +37,8 @@ $(function() {
 
 
         if (val.toLowerCase() == val) {
-            bigLetter = false;
-        } else { bigLetter = true; }
+            upperCaseLetter = false;
+        } else { upperCaseLetter = true; }
 
         num = false;
         for (var i = 0; i < val.length; i++) {
@@ -58,9 +58,9 @@ $(function() {
             }
         }
 
-        console.log(leng, bigLetter, num, specialChar);
+        console.log(leng, upperCaseLetter, num, specialChar);
 
-        if (leng == true && bigLetter == true && num == true && specialChar == true) {
+        if (leng == true && upperCaseLetter == true && num == true && specialChar == true) {
             $(this).addClass("valid").removeClass("invalid");
             $requirements.removeClass("wrong").addClass("good");
             $passwordAlert.removeClass("alert-warning").addClass("alert-success");
@@ -70,7 +70,7 @@ $(function() {
 
             if (leng == false) { $leng.addClass("wrong").removeClass("good"); } else { $leng.addClass("good").removeClass("wrong"); }
 
-            if (bigLetter == false) { $bigLetter.addClass("wrong").removeClass("good"); } else { $bigLetter.addClass("good").removeClass("wrong"); }
+            if (upperCaseLetter == false) { $upperCaseLetter.addClass("wrong").removeClass("good"); } else { $upperCaseLetter.addClass("good").removeClass("wrong"); }
 
             if (num == false) { $num.addClass("wrong").removeClass("good"); } else { $num.addClass("good").removeClass("wrong"); }
 
