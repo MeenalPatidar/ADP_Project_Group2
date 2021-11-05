@@ -1,6 +1,6 @@
-$("#username").on("change keyup", function() {
+$("#username").on("change keyup", function () {
     if (this.value.length > 0) {
-        $.post("/check", { "user": this.value }, function(result) {
+        $.post("/check", { "user": this.value }, function (result) {
             $("#register").prop("disabled", result);
         });
     } else {
@@ -9,7 +9,7 @@ $("#username").on("change keyup", function() {
 });
 
 
-$(function() {
+$(function () {
     var $password = $(".form-control[type='password']");
     var $passwordAlert = $(".password-alert");
     var $requirements = $(".requirements");
@@ -22,9 +22,9 @@ $(function() {
     var numbers = "0123456789";
 
     $requirements.addClass("wrong");
-    $password.on("focus", function() { $passwordAlert.show(); });
+    $password.on("focus", function () { $passwordAlert.show(); });
 
-    $password.on("input blur", function(e) {
+    $password.on("input blur", function (e) {
         var el = $(this);
         var val = el.val();
         $passwordAlert.show();
@@ -58,28 +58,38 @@ $(function() {
             }
         }
 
-        console.log(leng, upperCaseLetter, num, specialChar);
-
         if (leng == true && upperCaseLetter == true && num == true && specialChar == true) {
             $(this).addClass("valid").removeClass("invalid");
             $requirements.removeClass("wrong").addClass("good");
             $passwordAlert.removeClass("alert-warning").addClass("alert-success");
+            $passwordAlert.hide();
         } else {
             $(this).addClass("invalid").removeClass("valid");
             $passwordAlert.removeClass("alert-success").addClass("alert-warning");
 
-            if (leng == false) { $leng.addClass("wrong").removeClass("good"); } else { $leng.addClass("good").removeClass("wrong"); }
+            if (leng == false) {
+                $leng.addClass("wrong").removeClass("good");
+            } else {
+                $leng.addClass("good").removeClass("wrong");
+            }
 
-            if (upperCaseLetter == false) { $upperCaseLetter.addClass("wrong").removeClass("good"); } else { $upperCaseLetter.addClass("good").removeClass("wrong"); }
+            if (upperCaseLetter == false) {
+                $upperCaseLetter.addClass("wrong").removeClass("good");
+            } else {
+                $upperCaseLetter.addClass("good").removeClass("wrong");
+            }
 
-            if (num == false) { $num.addClass("wrong").removeClass("good"); } else { $num.addClass("good").removeClass("wrong"); }
+            if (num == false) {
+                $num.addClass("wrong").removeClass("good");
+            } else {
+                $num.addClass("good").removeClass("wrong");
+            }
 
-            if (specialChar == false) { $specialChar.addClass("wrong").removeClass("good"); } else { $specialChar.addClass("good").removeClass("wrong"); }
-        }
-
-
-        if (e.type == "blur") {
-            $passwordAlert.hide();
+            if (specialChar == false) {
+                $specialChar.addClass("wrong").removeClass("good");
+            } else {
+                $specialChar.addClass("good").removeClass("wrong");
+            }
         }
     });
 });
