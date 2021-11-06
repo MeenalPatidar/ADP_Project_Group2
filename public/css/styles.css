@@ -12,6 +12,7 @@ h1 {
 .add{
     margin:100px 0px;
 }
+
 .form-control{
     text-size-adjust: 80%;
     width: 70%;
@@ -20,6 +21,10 @@ h1 {
 
 .btn {
     min-width: 1%;
+}
+
+.editMenu {
+    display: none;
 }
 
 .btn2{

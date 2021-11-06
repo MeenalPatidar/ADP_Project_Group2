@@ -12,19 +12,30 @@
             </div>
         </form>
         <div class="container">
-            <% list.forEach(function(element) { %>
-                <form method="POST" class="list-element">
-                    <input type="checkbox" name="check" id="myCheck">
+            <% list.forEach(function (element) { %>
+                <form class="list-element" method="POST">
+                    <input type="checkbox" id="<%= element.id %>">
+                    <label for="<%= element.id %>" id="<%= element.id %>" class="form-label">
+                        <%= element.text %>
+                    </label>
+                    <button class="btn btn-outline-primary my-small-btn" type="button" id="<%= element.id %>"><i
+                            class="fas fa-pen"></i></button>
                     <input type="hidden" value="<%= element.id %>" name="elemID">
                     <input type="hidden" value="<%= userID %>" name="userId">
-                    <input type="text" value="<%=element.text%>" class="form-control" name="list_name" id="input_field">
-                    <button type="submit" formaction="/update" class="btn btn-outline-primary my-small-btn"><i class="fas fa-pen"></i></button>
-                    <button type="submit" formaction="/delete" class="btn btn-outline-danger my-small-btn"><i class="fas fa-trash-alt delete"></i></button>
+                    <button type="submit" formaction="/delete" class="btn btn-outline-danger my-small-btn"><i
+                            class="fas fa-trash-alt delete"></i></button>
+                    <div class="input-group editMenu" id="<%= element.id %>">
+                        <input type="text" value="<%= element.text %>" name="list_name" class="form-control">
+                        <button type="submit" formaction="/update" class="btn btn-primary">Save</button>
+                    </div>
                 </form>
             <% }); %>
         </div>
     </div>
     <div id="container">
-        <button type="submit" class="btn btn-primary btn-lg btn-block text-white" onclick="location.href='/logout';">Logout</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block text-white"
+            onclick="location.href='/logout';">Logout</button>
     </div>
-    <%- include ("partials/footer") -%>
+    <script src="js/main.js"></script>
+
+<%- include ("partials/footer") -%>
