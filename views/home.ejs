@@ -5,13 +5,13 @@
             <%= user %>'s Todolist
         </h1>
         <% list.forEach(function(element) { %>
-            <form action="/delete" method="POST" class="list-element">
-                <input type="checkbox" value="<%= element.id %>" onchange="this.form.submit()" id="<%= element.id %>">
+            <form method="POST" class="list-element">
+                <input type="checkbox" name="check" id="myCheck">
                 <input type="hidden" value="<%= element.id %>" name="elemID">
                 <input type="hidden" value="<%= userID %>" name="userId">
-                <label for="<%= element.id %>">
-                    <%= element.text %>
-                </label>
+                <input type="text" value="<%=element.text%>" name="list_name" id="input_field">
+                <button type="submit" formaction="/update">Save</button>
+                <button type="submit" formaction="/delete">Delete</button>
             </form>
         <% }); %>
         <form action="/add" method="POST">
@@ -22,5 +22,7 @@
             </div>
         </form>
     </div>
-
+    <div id="container">
+        <button type="submit" class="btn btn-primary btn-lg btn-block text-white" onclick="location.href='/logout';">Logout</button>
+    </div>
     <%- include ("partials/footer") -%>

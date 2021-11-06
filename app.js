@@ -16,7 +16,8 @@ const url = "mongodb://localhost:27017/ADP_Project";
 mongoose.connect(url, optionsForMongoose);
 
 const itemSchema = new mongoose.Schema({
-    text: String
+    text: {type:String},
+    check: {type:Boolean}
 });
 const Item = new mongoose.model("item", itemSchema);
 
@@ -136,7 +137,7 @@ app.post("/register", function (req, res) {
 
 app.post("/add", function (req, res) {
     const userName = req.body.user;
-    const newItem = Item({ text: req.body.item });
+    const newItem = Item({ text: req.body.item , check:false});
     User.findOne({ username: userName }, function (err, user) {
         if (!err) {
             if (user) {
@@ -155,14 +156,27 @@ app.post("/add", function (req, res) {
 app.post("/delete", function (req, res) {
     const userId = req.body.userId;
     const elemId = req.body.elemID;
-    User.findByIdAndUpdate(userId, { $pull: { itemList: { _id: elemId } } }, function (err, result) {
+    User.findByIdAndUpdate(userId, { $pull: { itemList: { _id: elemId } }}, function (err, result) {
         if (err) {
             console.log(err);
         }
         res.redirect("/");
     });
+
 });
 
+app.post("/update", function(req,res){
+    var item_text = req.body.list_name;
+    const userId = req.body.userId;
+    const elemId = req.body.elemID;
+    User.updateOne({"_id":userId, "itemList._id":elemId}, { $set : {"itemList.$.text":item_text} }, function (err, result) {
+        if (err) {
+            console.log(err);
+        }
+        res.redirect("/");
+    });
+
+});
 app.post("/check", function (req, res) {
     const userName = req.body.user;
     User.findOne({ username: userName }, function (err, user) {
@@ -176,6 +190,17 @@ app.post("/check", function (req, res) {
             res.send(err);
         }
     });
+});
+
+// app.post("/checked", function(req,res){
+//     console.log(req.body.check);
+//     res.send(req.body.check);
+//     res.redirect('/');
+// });
+
+app.get("/logout", function(req,res){
+    res.clearCookie("username");
+    res.redirect("/login");
 });
 
 app.listen(process.env.PORT || 3000, function () {

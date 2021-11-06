@@ -2,6 +2,18 @@ h1 {
     text-align: center;
 }
 
+.no_show{
+    display: none;
+}
+
+#container{
+    text-decoration: none;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container-fluid {
     padding-right: 20%;
     padding-left: 20%;
