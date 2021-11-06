@@ -1,5 +1,46 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 h1 {
     text-align: center;
+    margin-top: 25px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+.add{
+    margin:100px 0px;
+}
+.form-control{
+    text-size-adjust: 80%;
+    width: 70%;
+    display: inline-block;
+}
+
+.btn {
+    min-width: 1%;
+}
+
+.btn2{
+    min-width: 10%;
+}
+
+.my-small-btn {
+    width:4%;
+    padding:5px;
+}
+
+#container{
+    text-decoration: none;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin: 50px 0px;
 }
 
 .container-fluid {
@@ -7,12 +48,10 @@ h1 {
     padding-left: 20%;
 }
 
-.btn {
-    min-width: 10%;
-}
 
 .list-element {
     font-size: 1.5rem;
+    margin: 10px 0px;
 }
 
 #register {
@@ -56,4 +95,10 @@ h1 {
 
 .good .fa-times {
     display: none;
+}
+.signin{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    margin: auto;
 }

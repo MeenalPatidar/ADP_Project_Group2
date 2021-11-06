@@ -4,23 +4,27 @@
         <h1>
             <%= user %>'s Todolist
         </h1>
-        <% list.forEach(function(element) { %>
-            <form action="/delete" method="POST" class="list-element">
-                <input type="checkbox" value="<%= element.id %>" onchange="this.form.submit()" id="<%= element.id %>">
-                <input type="hidden" value="<%= element.id %>" name="elemID">
-                <input type="hidden" value="<%= userID %>" name="userId">
-                <label for="<%= element.id %>">
-                    <%= element.text %>
-                </label>
-            </form>
-        <% }); %>
-        <form action="/add" method="POST">
+        <form action="/add" method="POST" class="add">
             <div class="input-group">
                 <input type="text" name="item" class="form-control">
                 <input type="hidden" name="user" value="<%= user %>">
-                <button type="submit" class="btn btn-primary">+</button>
+                <button type="submit" class="btn btn-primary btn2">+</button>
             </div>
         </form>
+        <div class="container">
+            <% list.forEach(function(element) { %>
+                <form method="POST" class="list-element">
+                    <input type="checkbox" name="check" id="myCheck">
+                    <input type="hidden" value="<%= element.id %>" name="elemID">
+                    <input type="hidden" value="<%= userID %>" name="userId">
+                    <input type="text" value="<%=element.text%>" class="form-control" name="list_name" id="input_field">
+                    <button type="submit" formaction="/update" class="btn btn-outline-primary my-small-btn"><i class="fas fa-pen"></i></button>
+                    <button type="submit" formaction="/delete" class="btn btn-outline-danger my-small-btn"><i class="fas fa-trash-alt delete"></i></button>
+                </form>
+            <% }); %>
+        </div>
     </div>
-
+    <div id="container">
+        <button type="submit" class="btn btn-primary btn-lg btn-block text-white" onclick="location.href='/logout';">Logout</button>
+    </div>
     <%- include ("partials/footer") -%>

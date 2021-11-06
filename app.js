@@ -16,7 +16,7 @@ const url = "mongodb://localhost:27017/ADP_Project";
 mongoose.connect(url, optionsForMongoose);
 
 const itemSchema = new mongoose.Schema({
-    text: String
+    text: {type:String}
 });
 const Item = new mongoose.model("item", itemSchema);
 
@@ -35,8 +35,9 @@ const User = new mongoose.model("user", userSchema)
 
 const newUserItems = [
     Item({ text: "Hello user, we are happy to see you use this app" }),
-    Item({ text: "Click on the text box below, add what you want to add and click on the + button to add new items" }),
-    Item({ text: "Click on the checkbox on the left of any existing item to delete it" })
+    Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items" }),
+    Item({ text: "Click on the edit on the right of any existing item to edit it." }),
+    Item({ text: "Click on the delete on the right of any existing item to delete it." })
 ];
 
 app.get("/", function (req, res) {
@@ -136,7 +137,7 @@ app.post("/register", function (req, res) {
 
 app.post("/add", function (req, res) {
     const userName = req.body.user;
-    const newItem = Item({ text: req.body.item });
+    const newItem = Item({ text: req.body.item});
     User.findOne({ username: userName }, function (err, user) {
         if (!err) {
             if (user) {
@@ -155,14 +156,27 @@ app.post("/add", function (req, res) {
 app.post("/delete", function (req, res) {
     const userId = req.body.userId;
     const elemId = req.body.elemID;
-    User.findByIdAndUpdate(userId, { $pull: { itemList: { _id: elemId } } }, function (err, result) {
+    User.findByIdAndUpdate(userId, { $pull: { itemList: { _id: elemId } }}, function (err, result) {
         if (err) {
             console.log(err);
         }
         res.redirect("/");
     });
+
 });
 
+app.post("/update", function(req,res){
+    var item_text = req.body.list_name;
+    const userId = req.body.userId;
+    const elemId = req.body.elemID;
+    User.updateOne({"_id":userId, "itemList._id":elemId}, { $set : {"itemList.$.text":item_text} }, function (err, result) {
+        if (err) {
+            console.log(err);
+        }
+        res.redirect("/");
+    });
+
+});
 app.post("/check", function (req, res) {
     const userName = req.body.user;
     User.findOne({ username: userName }, function (err, user) {
@@ -176,6 +190,11 @@ app.post("/check", function (req, res) {
             res.send(err);
         }
     });
+});
+
+app.get("/logout", function(req,res){
+    res.clearCookie("username");
+    res.redirect("/login");
 });
 
 app.listen(process.env.PORT || 3000, function () {
