@@ -2,8 +2,14 @@ h1 {
     text-align: center;
 }
 
-.no_show{
-    display: none;
+.btn {
+    min-width: 1%;
+    margin: 5px;
+}
+
+.my-small-btn {
+    width:4%;
+    padding:5px;
 }
 
 #container{
@@ -19,9 +25,9 @@ h1 {
     padding-left: 20%;
 }
 
-.btn {
+/* .btn {
     min-width: 10%;
-}
+} */
 
 .list-element {
     font-size: 1.5rem;

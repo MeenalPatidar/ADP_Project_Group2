@@ -10,8 +10,8 @@
                 <input type="hidden" value="<%= element.id %>" name="elemID">
                 <input type="hidden" value="<%= userID %>" name="userId">
                 <input type="text" value="<%=element.text%>" name="list_name" id="input_field">
-                <button type="submit" formaction="/update">Save</button>
-                <button type="submit" formaction="/delete">Delete</button>
+                <button type="submit" formaction="/update" class="btn btn-outline-primary my-small-btn"><i class="fas fa-pen"></i></button>
+                <button type="submit" formaction="/delete" class="btn btn-outline-danger my-small-btn"><i class="fas fa-trash-alt delete"></i></button>
             </form>
         <% }); %>
         <form action="/add" method="POST">
