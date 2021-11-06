@@ -35,8 +35,9 @@ const User = new mongoose.model("user", userSchema)
 
 const newUserItems = [
     Item({ text: "Hello user, we are happy to see you use this app" }),
-    Item({ text: "Click on the text box below, add what you want to add and click on the + button to add new items" }),
-    Item({ text: "Click on the checkbox on the left of any existing item to delete it" })
+    Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items" }),
+    Item({ text: "Click on the edit on the right of any existing item to edit it." }),
+    Item({ text: "Click on the delete on the right of any existing item to delete it." })
 ];
 
 app.get("/", function (req, res) {
