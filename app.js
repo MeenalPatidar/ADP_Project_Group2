@@ -16,8 +16,7 @@ const url = "mongodb://localhost:27017/ADP_Project";
 mongoose.connect(url, optionsForMongoose);
 
 const itemSchema = new mongoose.Schema({
-    text: {type:String},
-    check: {type:Boolean}
+    text: {type:String}
 });
 const Item = new mongoose.model("item", itemSchema);
 
@@ -137,7 +136,7 @@ app.post("/register", function (req, res) {
 
 app.post("/add", function (req, res) {
     const userName = req.body.user;
-    const newItem = Item({ text: req.body.item , check:false});
+    const newItem = Item({ text: req.body.item});
     User.findOne({ username: userName }, function (err, user) {
         if (!err) {
             if (user) {
@@ -191,12 +190,6 @@ app.post("/check", function (req, res) {
         }
     });
 });
-
-// app.post("/checked", function(req,res){
-//     console.log(req.body.check);
-//     res.send(req.body.check);
-//     res.redirect('/');
-// });
 
 app.get("/logout", function(req,res){
     res.clearCookie("username");
