@@ -91,11 +91,6 @@ h1 {
     }
 }
 
-.alert {
-    display: none;
-    width: 500px;
-}
-
 .requirements {
     list-style-type: none;
 }

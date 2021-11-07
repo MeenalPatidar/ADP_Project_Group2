@@ -4,7 +4,7 @@ $("#username").on("change keyup", function () {
             $("#register").prop("disabled", result);
         });
     } else {
-        $("#register").prop("disabled", true);
+        $("#register").prop("disabled", !result);
     }
 });
 
@@ -63,9 +63,11 @@ $(function () {
             $requirements.removeClass("wrong").addClass("good");
             $passwordAlert.removeClass("alert-warning").addClass("alert-success");
             $passwordAlert.hide();
+            $("#register").prop("disabled", false);
         } else {
             $(this).addClass("invalid").removeClass("valid");
             $passwordAlert.removeClass("alert-success").addClass("alert-warning");
+            $("#register").prop("disabled", true);
 
             if (leng == false) {
                 $leng.addClass("wrong").removeClass("good");

@@ -11,9 +11,11 @@
             <input id="password" type="password" name="password" class="form-control">
             <button id="login" type="submit" class="btn btn-primary" disabled>Login</button>
         </form>
-        <div class="alert alert-danger" role="alert">
-            <%= error %>
-        </div>
+        <% if (error !== "") { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
         <form action="/register">
             <label for="register-button">
                 Please <button id="register-button" type="submit" class="btn btn-primary">Register</button> if you are a

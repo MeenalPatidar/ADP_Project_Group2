@@ -68,7 +68,7 @@ app.get("/login", function (req, res) {
     var bad_auth = req.query.msg ? true : false;
     if (bad_auth) {
         res.render("login", {
-            error: "Invalid Username or Password"
+            error: "Incorrect Password"
         });
     } else {
         res.render("login", {

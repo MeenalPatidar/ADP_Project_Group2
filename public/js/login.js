@@ -4,6 +4,6 @@ $("#username").on("change keyup", function () {
 			$("#login").prop("disabled", !result);
 		});
 	} else {
-		$("#login").prop("disabled", true);
+		$("#login").prop("disabled", result);
 	}
 });
