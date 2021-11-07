@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -9,14 +9,8 @@ h1 {
 
 }
 
-.add{
-    margin:100px 0px;
-}
-
-.form-control{
-    text-size-adjust: 80%;
-    width: 70%;
-    display: inline-block;
+.add {
+    margin: 100px 0px;
 }
 
 .btn {
@@ -27,16 +21,20 @@ h1 {
     display: none;
 }
 
-.btn2{
+.btn2 {
     min-width: 10%;
 }
 
 .my-small-btn {
-    width:4%;
-    padding:5px;
+    width: 40px;
+    padding: 5px;
 }
 
-#container{
+.col-4 {
+    text-align: right;
+}
+
+#container {
     text-decoration: none;
     margin-top: 50px;
     display: flex;
@@ -44,13 +42,21 @@ h1 {
     justify-content: center;
 }
 
-.container{
+.form-label {
+    max-width: 90%;
+}
+
+.container {
     margin: 50px 0px;
+    max-width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
 .container-fluid {
     padding-right: 20%;
     padding-left: 20%;
+    align-items: center;
 }
 
 
@@ -80,8 +86,8 @@ h1 {
 
 @media (max-width: 1000px) {
     .container-fluid {
-        padding-right: 10%;
-        padding-left: 10%;
+        padding-right: 2%;
+        padding-left: 2%;
     }
 }
 
@@ -101,7 +107,8 @@ h1 {
 .good .fa-times {
     display: none;
 }
-.signin{
+
+.signin {
     position: relative;
     height: 100%;
     width: 50%;

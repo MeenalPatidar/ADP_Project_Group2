@@ -16,7 +16,8 @@ const url = "mongodb://localhost:27017/ADP_Project";
 mongoose.connect(url, optionsForMongoose);
 
 const itemSchema = new mongoose.Schema({
-    text: { type: String }
+    text: { type: String },
+    check: { type: String }
 });
 const Item = new mongoose.model("item", itemSchema);
 
@@ -34,10 +35,10 @@ const userSchema = new mongoose.Schema({
 const User = new mongoose.model("user", userSchema)
 
 const newUserItems = [
-    Item({ text: "Hello user, we are happy to see you use this app" }),
-    Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items" }),
-    Item({ text: "Click on the edit on the right of any existing item to edit it." }),
-    Item({ text: "Click on the delete on the right of any existing item to delete it." })
+    Item({ text: "Hello user, we are happy to see you use this app", check: "True" }),
+    Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items", check: "True" }),
+    Item({ text: "Click on the edit on the right of any existing item to edit it.", check: "True" }),
+    Item({ text: "Click on the delete on the right of any existing item to delete it.", check: "True" })
 ];
 
 app.get("/", function (req, res) {
@@ -137,7 +138,7 @@ app.post("/register", function (req, res) {
 
 app.post("/add", function (req, res) {
     const userName = req.body.user;
-    const newItem = Item({ text: req.body.item });
+    const newItem = Item({ text: req.body.item, check: "False" });
     User.findOne({ username: userName }, function (err, user) {
         if (!err) {
             if (user) {
@@ -196,6 +197,35 @@ app.post("/check", function (req, res) {
 app.get("/logout", function (req, res) {
     res.clearCookie("username");
     res.redirect("/login");
+});
+
+app.post("/updateStatus", function (req, res) {
+    const userId = req.body.userId;
+    const elemID = req.body.elemID;
+    User.findById(userId, function (err, user) {
+        if (!err) {
+            if (user) {
+                user.itemList.forEach(function (element) {
+                    if (element._id == elemID) {
+                        if (element.check === "False") {
+                            element.check = "True";
+                        } else {
+                            element.check = "False";
+                        }
+                    }
+                });
+                user.save(function (error) {
+                    if (!error) {
+                        res.redirect("/");
+                    } else {
+                        console.log(error);
+                    }
+                });
+            }
+        } else {
+            console.log(err);
+        }
+    });
 });
 
 app.listen(process.env.PORT || 3000, function () {

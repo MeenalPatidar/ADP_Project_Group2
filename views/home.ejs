@@ -13,17 +13,34 @@
         </form>
         <div class="container">
             <% list.forEach(function (element) { %>
-                <form class="list-element" method="POST">
-                    <input type="checkbox" id="<%= element.id %>">
-                    <label for="<%= element.id %>" id="<%= element.id %>" class="form-label">
-                        <%= element.text %>
-                    </label>
-                    <button class="btn btn-outline-primary my-small-btn" type="button" id="<%= element.id %>"><i
-                            class="fas fa-pen"></i></button>
+                <form class="list-element" method="POST" action="/updateStatus">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="input-group">
+                                <% if (element.check==="False" ) { %>
+                                    <input type="checkbox" id="<%= element.id %>" onchange="this.form.submit()">
+                                    <label for="<%= element.id %>" id="<%= element.id %>" class="form-label list-item">
+                                        <%= element.text %>
+                                    </label>
+                                <% } else { %>
+                                    <input type="checkbox" id="<%= element.id %>" onchange="this.form.submit()"
+                                        checked>
+                                    <label for="<%= element.id %>" id="<%= element.id %>"
+                                        class="form-label list-item" style="text-decoration: line-through;">
+                                        <%= element.text %>
+                                    </label>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-outline-primary my-small-btn" type="button" id="<%= element.id %>"><i
+                                    class="fas fa-pen"></i></button>
+                            <button type="submit" formaction="/delete" class="btn btn-outline-danger my-small-btn"><i
+                                    class="fas fa-trash-alt delete"></i></button>
+                        </div>
+                    </div>
                     <input type="hidden" value="<%= element.id %>" name="elemID">
                     <input type="hidden" value="<%= userID %>" name="userId">
-                    <button type="submit" formaction="/delete" class="btn btn-outline-danger my-small-btn"><i
-                            class="fas fa-trash-alt delete"></i></button>
                     <div class="input-group editMenu" id="<%= element.id %>">
                         <input type="text" value="<%= element.text %>" name="list_name" class="form-control">
                         <button type="submit" formaction="/update" class="btn btn-primary">Save</button>
