@@ -114,3 +114,7 @@ h1 {
     width: 50%;
     margin: auto;
 }
+
+.strikeThrough {
+    text-decoration: line-through;
+}

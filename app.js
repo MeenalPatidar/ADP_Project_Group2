@@ -35,10 +35,10 @@ const userSchema = new mongoose.Schema({
 const User = new mongoose.model("user", userSchema)
 
 const newUserItems = [
-    Item({ text: "Hello user, we are happy to see you use this app", check: "True" }),
-    Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items", check: "True" }),
-    Item({ text: "Click on the edit on the right of any existing item to edit it.", check: "True" }),
-    Item({ text: "Click on the delete on the right of any existing item to delete it.", check: "True" })
+    Item({ text: "Hello user, we are happy to see you use this app", check: "False" }),
+    Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items", check: "False" }),
+    Item({ text: "Click on the edit on the right of any existing item to edit it.", check: "False" }),
+    Item({ text: "Click on the delete on the right of any existing item to delete it.", check: "False" })
 ];
 
 app.get("/", function (req, res) {
