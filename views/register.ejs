@@ -1,17 +1,17 @@
 <%- include ("partials/header") -%>
 
     <div class="container-fluid main2">
-        <p class="sign" align="center">Register</p>
+        <p class="sign">Register</p>
         <form action="/register" method="POST">
             <!-- <label for="username" class="form-label">
                 Username
             </label> -->
-            <input id="username" type="text" name="name" class="form-control un" align="center" placeholder="Username">
+            <input id="username" type="text" name="name" class="form-control un" placeholder="Username">
             <!-- <label for="password" class="form-label validate" data-error="wrong" data-success="right">
                 Password
             </label> -->
-            <input id="password" type="password" name="password" class="form-control validate pass" align="center" placeholder="Password">
-            <div class="col-md-12" align="center">
+            <input id="password" type="password" name="password" class="form-control validate pass" placeholder="Password">
+            <div class="col-md-12">
                 <div class="alert alert-warning password-alert" role="alert">
                     Your password must contain the following:
                     <ul>
@@ -27,7 +27,7 @@
                     </ul>
                 </div>
             </div>
-            <div align="center"><button id="register" type="submit" class="btn btn-primary submit" disabled>Register</button></div>
+            <div><button id="register" type="submit" class="btn btn-primary submit" disabled>Register</button></div>
         </form>
         <% if (error !== "") { %>
             <div class="alert alert-danger" role="alert">

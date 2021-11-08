@@ -1,16 +1,16 @@
 <%- include ("partials/header") -%>
     <div class="container-fluid main">
-        <p class="sign" align="center">Login</p>
+        <p class="sign">Login</p>
         <form action="/login" method="post" class="form1">
             <!-- <label for="username" class="form-label">
                 Username
             </label> -->
-            <input id="username" type="text" name="name" class="form-control un" align="center" placeholder="Username">
+            <input id="username" type="text" name="name" class="form-control un" placeholder="Username">
             <!-- <label for="password" class="form-label">
                 Password
             </label> -->
-            <input id="password" type="password" name="password" class="form-control pass" align="center" placeholder="Password">
-           <div align="center"> <button id="login" type="submit" class="btn btn-primary submit" disabled>Login</button></div>
+            <input id="password" type="password" name="password" class="form-control pass" placeholder="Password">
+           <div><button id="login" type="submit" class="btn btn-primary submit" disabled>Login</button></div>
         </form>
         <% if (error !== "") { %>
             <div class="alert alert-danger" role="alert">
@@ -18,13 +18,13 @@
             </div>
         <% } %>
         <div class="redirect">
-        <form action="/register">
-            <label for="register-button">
-                <button id="register-button" type="submit" class="btn btn-secondary btn-sm">Register</button> if you are a
-                new user
-            </label>
-        </form>
-    </div>
+            <form action="/register">
+                <label for="register-button">
+                    <button id="register-button" type="submit" class="btn btn-secondary btn-sm">Register</button> if you are a
+                    new user
+                </label>
+            </form>
+        </div>
     </div>
 
     <script src="js/login.js"></script>
