@@ -84,12 +84,24 @@ h1 {
         padding-left: 15%;
         padding-right: 15%;
     }
+
+    .main {
+        width: 80% !important;
+    }
 }
 
 @media (max-width: 1000px) {
     .container-fluid {
         padding-right: 2%;
         padding-left: 2%;
+    }
+
+    .main {
+        width: 90% !important;
+    }
+
+    .main2 {
+        width: 90% !important;
     }
 }
 
@@ -118,7 +130,7 @@ h1 {
 
 .main {
     background-color: #FFFFFF;
-    width: 70vw;
+    width: 70%;
     height: 400px;
     margin: 7em auto;
     border-radius: 1.5em;
@@ -130,7 +142,7 @@ h1 {
     background-color: #FFFFFF;
     width: 80vw;
     height: 600px;
-    margin: 1em auto;
+    margin: 4em auto;
     border-radius: 1.5em;
     text-align: center;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
