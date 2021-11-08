@@ -1,6 +1,6 @@
 <%- include ("partials/header") -%>
 
-    <div class="container-fluid">
+    <div class="container-fluid main3">
         <h1>
             <%= user %>'s Todolist
         </h1>
@@ -49,8 +49,8 @@
             <% }); %>
         </div>
     </div>
-    <div id="container">
-        <button type="submit" class="btn btn-primary btn-lg btn-block text-white"
+    <div id="container" class="out">
+        <button type="submit" class="btn btn-warning btn-lg btn-block"
             onclick="location.href='/logout';">Logout</button>
     </div>
     <script src="js/main.js"></script>
