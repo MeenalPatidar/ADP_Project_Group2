@@ -105,6 +105,10 @@ h1 {
     .main {
         width: 80% !important;
     }
+
+    .list-element {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -119,6 +123,10 @@ h1 {
 
     .main2 {
         width: 90% !important;
+    }
+
+    .list-element {
+        font-size: 20px;
     }
 }
 
