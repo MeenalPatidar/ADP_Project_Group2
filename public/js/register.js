@@ -1,3 +1,5 @@
+// Check whether user already exists or not and disable/enable register button
+// depending on that. Activate if username is not taken already and disable on the opposite
 $("#username").on("change keyup", function () {
     if (this.value.length > 0) {
         $.post("/check", { "user": this.value }, function (result) {
@@ -8,7 +10,8 @@ $("#username").on("change keyup", function () {
     }
 });
 
-
+// Check whether password contains one capital letter, one number, one special character
+// and is atleast 8 characters long
 $(function () {
     var $password = $(".form-control[type='password']");
     var $passwordAlert = $(".password-alert");

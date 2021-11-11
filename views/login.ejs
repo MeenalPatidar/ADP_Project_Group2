@@ -1,27 +1,23 @@
 <%- include ("partials/header") -%>
     <div class="container-fluid main">
         <p class="sign">Login</p>
-        
+        <!-- Login form -->
         <form action="/login" method="post" class="form1">
-            <!-- <label for="username" class="form-label">
-                Username
-            </label> -->
             <input id="username" type="text" name="name" class="form-control un" placeholder="Username">
-            <!-- <label for="password" class="form-label">
-                Password
-            </label> -->
             <input id="password" type="password" name="password" class="form-control pass" placeholder="Password">
            <div><button id="login" type="submit" class="btn btn-primary submit" disabled>Login</button></div>
         </form>
+        <!-- This shows up on login failure, usually due to wrong password, since username is already valid -->
         <% if (error !== "") { %>
             <div class="alert alert-danger" role="alert">
                 <%= error %>
             </div>
         <% } %>
+        <!-- Redirect to register page on clicking on the button below -->
         <div class="redirect">
             <form action="/register">
                 <label for="register-button">
-                    Don't have Account? <button id="register-button" type="submit" class="btn btn-secondary btn-sm">Register here</button>
+                    Don't have an account? <button id="register-button" type="submit" class="btn btn-secondary btn-sm">Register here</button>
                 </label>
             </form>
         </div>

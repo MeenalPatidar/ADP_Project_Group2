@@ -1,26 +1,36 @@
+// import express for server, mongoose for connection with mongodb
+// and cookie parser for user login persistence
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
+// initialise server and plugins to be used
+// ejs for templates and passing of variables from backend to frontend
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use(cookieParser());
 app.set("view engine", "ejs");
 
+// required for latest mongoose
 const optionsForMongoose = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 };
+
+// connect to mongodb database
 const url = "mongodb://localhost:27017/ADP_Project";
 mongoose.connect(url, optionsForMongoose);
 
+// speciality of mongoose: convert noSQL to semi-SQL for the sake of convenience
+// schema and model(format to follow in simple terms) for items
 const itemSchema = new mongoose.Schema({
     text: { type: String },
     check: { type: String }
 });
 const Item = new mongoose.model("item", itemSchema);
 
+// schema for users
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -34,13 +44,18 @@ const userSchema = new mongoose.Schema({
 });
 const User = new mongoose.model("user", userSchema)
 
+// for any new user, these are default instructions which would show up as todo list items
 const newUserItems = [
     Item({ text: "Hello user, we are happy to see you use this app", check: "False" }),
     Item({ text: "Click on the text box above, add what you want to add and click on the + button to add new items", check: "False" }),
     Item({ text: "Click on the edit on the right of any existing item to edit it.", check: "False" }),
-    Item({ text: "Click on the delete on the right of any existing item to delete it.", check: "False" })
+    Item({ text: "Click on the delete on the right of any existing item to delete it.", check: "False" }),
+    Item({ text: "Click on the checkbox on the left of any existing item to strike it through.", check: "False" })
 ];
 
+// the home page route
+// checks if user is logged in, if yes shows the list corresponding to the user
+// if not, redirects to the login page
 app.get("/", function (req, res) {
     var userName = req.cookies.username;
     if (userName) {
@@ -64,6 +79,7 @@ app.get("/", function (req, res) {
     }
 });
 
+// the login page route
 app.get("/login", function (req, res) {
     var bad_auth = req.query.msg ? true : false;
     if (bad_auth) {
@@ -77,6 +93,8 @@ app.get("/login", function (req, res) {
     }
 });
 
+// the post route where the login data is collected and authenticated
+// also the cookie is created here for the user login to persist
 app.post("/login", function (req, res) {
     const newUser = {
         username: req.body.name,
@@ -100,6 +118,7 @@ app.post("/login", function (req, res) {
     });
 });
 
+// the register page route
 app.get("/register", function (req, res) {
     var bad_auth = req.query.msg ? true : false;
     if (bad_auth) {
@@ -112,6 +131,9 @@ app.get("/register", function (req, res) {
     });
 });
 
+// the post route where the register function is handled
+// in this route too the cookie is made so that
+// the user does not have to relogin again after registration
 app.post("/register", function (req, res) {
     const newUser = new User({
         username: req.body.name,
@@ -136,6 +158,8 @@ app.post("/register", function (req, res) {
     });
 });
 
+// the post route for adding new items
+// this is where the data for new items is sent and added to the user's profile
 app.post("/add", function (req, res) {
     const userName = req.body.user;
     const newItem = Item({ text: req.body.item, check: "False" });
@@ -154,6 +178,7 @@ app.post("/add", function (req, res) {
     });
 });
 
+// the post route for deleting a list item
 app.post("/delete", function (req, res) {
     const userId = req.body.userId;
     const elemId = req.body.elemID;
@@ -166,6 +191,7 @@ app.post("/delete", function (req, res) {
 
 });
 
+// the post route for updating a list item
 app.post("/update", function (req, res) {
     const item_text = req.body.list_name;
     const userId = req.body.userId;
@@ -179,6 +205,10 @@ app.post("/update", function (req, res) {
 
 });
 
+// this is a route which checks whether a username is already taken or not
+// depending on the page(login or register) the function works differently
+// on the register page one cannot register if the username is already taken
+// on the login page one cannot login unless the username is already taken
 app.post("/check", function (req, res) {
     const userName = req.body.user;
     User.findOne({ username: userName }, function (err, user) {
@@ -194,11 +224,14 @@ app.post("/check", function (req, res) {
     });
 });
 
+// the logout page
 app.get("/logout", function (req, res) {
     res.clearCookie("username");
     res.redirect("/login");
 });
 
+// this route handles the strike through part in the items
+// strike through roughly means that the user has postponed the task for some other time
 app.post("/updateStatus", function (req, res) {
     const userId = req.body.userId;
     const elemID = req.body.elemID;
@@ -228,6 +261,8 @@ app.post("/updateStatus", function (req, res) {
     });
 });
 
+// start the server on process.env.PORT, which comes when we host it on a remote server
+// else host on port 3000 locally
 app.listen(process.env.PORT || 3000, function () {
     console.log("Server started at port 3000");
 });

@@ -1,9 +1,11 @@
 <%- include ("partials/header") -%>
 
     <div class="container-fluid main3">
+        <!-- Heading to show's users name -->
         <h1>
             <%= user %>'s Todolist
         </h1>
+        <!-- The input form to add new items -->
         <form action="/add" method="POST" class="add">
             <div class="input-group">
                 <input type="text" name="item" class="form-control">
@@ -11,6 +13,7 @@
                 <button type="submit" class="btn btn-primary btn2">+</button>
             </div>
         </form>
+        <!-- Container where the list items are shown -->
         <div class="container">
             <% list.forEach(function (element) { %>
                 <form class="list-element" method="POST" action="/updateStatus">
@@ -32,6 +35,7 @@
                                 <% } %>
                             </div>
                         </div>
+                        <!-- The edit and delete buttons -->
                         <div class="col-4 listedit">
                             <button class="btn btn-outline-primary my-small-btn" type="button" id="<%= element.id %>"><i
                                     class="fas fa-pen"></i></button>
@@ -39,6 +43,7 @@
                                     class="fas fa-trash-alt delete"></i></button>
                         </div>
                     </div>
+                    <!-- The edit form which is hidden usually and on clicking the edit button pops out -->
                     <input type="hidden" value="<%= element.id %>" name="elemID">
                     <input type="hidden" value="<%= userID %>" name="userId">
                     <div class="input-group editMenu" id="<%= element.id %>">
@@ -49,6 +54,7 @@
             <% }); %>
         </div>
     </div>
+    <!-- Logout button -->
     <div id="container" class="out">
         <button type="submit" class="btn btn-warning btn-lg btn-block"
             onclick="location.href='/logout';">Logout</button>
