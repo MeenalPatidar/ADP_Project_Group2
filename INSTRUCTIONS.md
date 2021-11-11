@@ -8,11 +8,12 @@
     > node app.js
     
 # Preview in web
-    Launch [localhost:3000](http://localhost:3000/login?) in your browser
+Launch [localhost:3000](http://localhost:3000/login?) in your browser
+
+
 
 ---
-**NOTE**
-
+**NOTE:**
 Keep the mongod process running, or it will show errors.
 
 ---
