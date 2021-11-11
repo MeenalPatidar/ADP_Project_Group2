@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(-45deg, #ee7752, #6e6961, #ff6df8, #000000);
+    background: linear-gradient(-45deg, #ee7752, #6e6961, #68a5f5, #000000);
     background-size: 400% 400%;
     animation: gradient 7s ease infinite;
     /* background-color: #F3EBF6; */
@@ -41,7 +41,7 @@ h1 {
 
 .btn2 {
     min-width: 10%;
-    background: linear-gradient(to right, #9C27B0, #E040FB);
+    background: linear-gradient(to right, #124f9e, #40d6fb);
 }
 
 .my-small-btn {
@@ -178,11 +178,11 @@ h1 {
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 .input-group{
-    background-color: rgb(66 54 64 / 25%);
+    background-color: rgba(172, 184, 220, 0.71);
     border-radius: 15px;
 }
 .listedit {
-    background-color: rgb(66 54 64 / 25%);
+    background-color: rgba(172, 184, 220, 0.71);
     border-radius: 15px;
 }
 
