@@ -1,7 +1,24 @@
 body {
-    background-color: #F3EBF6;
+    background: linear-gradient(-45deg, #ee7752, #6e6961, #ff6df8, #000000);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    /* background-color: #F3EBF6; */
     font-family: 'Ubuntu', sans-serif;
 }
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 
 h1 {
     text-align: center;
@@ -152,12 +169,21 @@ h1 {
 .main3 {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
-    background-color: #FFFFFF;
+    background: url(../bgs/bg6.jpeg);
+    background-size: 100%;
     width: 95vw;
     height: fit-content;
     margin: 1em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+.input-group{
+    background-color: rgb(66 54 64 / 25%);
+    border-radius: 15px;
+}
+.listedit {
+    background-color: rgb(66 54 64 / 25%);
+    border-radius: 15px;
 }
 
 .sign {
